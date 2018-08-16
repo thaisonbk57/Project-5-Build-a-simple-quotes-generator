@@ -3,25 +3,36 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Project 5 - Step 2 | Quotes Generator</title>
-
-<style type="text/css">
-	h1 {
-		margin: auto;
-		margin-top: 100px;
-		background: pink;
-		text-align: center;
-		max-width: 68%;
-		padding: 30px;
-		border-radius: 8px;
-	}
-</style>
+    <title>Quotes Generator</title>
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
 </head>
 
 <body>
-
-	<h1>QUOTES GENERATOR</h1>
-    <script src="script.js"></script>
+    <header>
+        <h1>QUOTES GENERATOR</h1>
+    </header>
+    <main class="main">
+        <div class="board">
+            <div class="options">
+                <label class="switch">
+                    <input type="checkbox" checked>
+                    <span class="slider"></span>
+                </label>
+                <label class="quantity">
+                    <button id="minus">-</button>
+                    <input type="number" id="input--quantity" class="input--quantity" min=1 max=5 value=1>
+                    <button id="plus">+</button>
+                </label>
+                <button class="generate">GENERATE</button>
+            </div>
+            <div class="display">
+            </div>
+        </div>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <!-- <script src="js/app.js"></script> -->
+    <script src="js/draft.js"></script>
 </body>
 
 </html>
