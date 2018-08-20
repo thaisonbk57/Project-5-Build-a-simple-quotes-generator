@@ -1,0 +1,25 @@
+{
+  "name": "project-5-build-a-simple-quotes-generator",
+  "version": "1.0.0",
+  "description": "This is a simple quotes generator that fetch data from array stored in side the program itself and then assemble sentence fragments to create a quote.",
+  "main": "index.js",
+  "scripts": {
+    "live": "set port=3035 & live-server",
+    "compile:sass": "node-sass ./css/style.scss ./css/style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thaisonbk57/Project-5-Build-a-simple-quotes-generator.git"
+  },
+  "author": "Thai Son Dang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thaisonbk57/Project-5-Build-a-simple-quotes-generator/issues"
+  },
+  "homepage": "https://github.com/thaisonbk57/Project-5-Build-a-simple-quotes-generator#readme",
+  "devDependencies": {
+    "live-server": "^1.2.0",
+    "node-sass": "^4.9.3"
+  },
+  "dependencies": {}
+}

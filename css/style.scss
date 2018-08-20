@@ -1,0 +1,219 @@
+$optionBackground: #ff6f69;
+$displayBackground: #FFC312;
+
+$color-primary: #F79F1F;
+$color-secondary: #FFC312;
+$color-tertiary: #EE5A24;
+
+$color-dark: #333;
+$color-white: #fff;
+
+
+
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+    font-family: 'Raleway', sans-serif;
+    color: $color-dark;
+}
+
+html,
+body {
+    background: lightblue;
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+header {
+    text-align: center;
+    margin-top: 14rem;
+    margin-bottom: 2rem;
+
+    .heading--text {
+        font-size: 3rem;
+        letter-spacing: 5px;
+    }
+}
+
+.board {
+    max-width: 50rem;
+    width: 100%;
+    margin: auto;
+    border-radius: .8rem;
+    &__options {
+        background: $optionBackground;
+        padding: 2rem;
+        border-top-left-radius: .8rem;
+        border-top-right-radius: .8rem;
+        &::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+    }
+
+    &__display {
+        min-height: 35rem;
+        background: $displayBackground;
+        padding-top: 3rem;
+        padding-bottom: 1rem;
+        border-bottom-left-radius: .8rem;
+        border-bottom-right-radius: .8rem;
+        position: relative;
+        &::after {
+            content: "by Thaison";
+            display: block;
+            position: absolute;
+            bottom: -2rem;
+            text-align: center;
+            left: 0;
+            right: 0;
+            font-size: 1.5rem;
+        }
+    }
+}
+
+.switch-button {
+    display: inline-block;
+    position: relative;
+    height: 3.5rem;
+    width: 6.5rem;
+    background: $color-white;
+    border-top-left-radius: 1.8rem;
+    border-bottom-left-radius: 1.8rem;
+    border-top-right-radius: 1.8rem;
+    border-bottom-right-radius: 1.8rem;
+    margin-left: 6rem;
+    margin-right: 10rem;
+    cursor: pointer;
+    float: left;
+
+    &::before,
+    &::after {
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        font-size: 1.5rem;
+        line-height: 3.5rem;
+        font-weight: 200;
+        color: $color-dark;
+    }
+
+    &::before {
+        content: "HUMAN";
+        left: -1rem;
+        transform: translateX(-100%);
+    }
+
+    &::after {
+        content: "ANIMALS";
+        right: -1rem;
+        transform: translateX(100%);
+    }
+
+    &--checkbox {
+        display: none;
+    }
+
+    &--slider {
+        position: absolute;
+        display: block;
+        top: .4rem;
+        left: .4rem;
+        bottom: .4rem;
+        width: 2.7rem;
+        height: 2.7rem;
+        border-radius: 50%;
+        background: #12CBC4;
+        transition: all .4s;
+    }
+
+    &--checkbox:checked~&--slider {
+        left: 3.4rem;
+    }
+}
+
+.quantity-input {
+    float: left;
+    position: relative;
+    margin-left: 3rem;
+    #plus,
+    #minus {
+        border: none;
+        display: block;
+        position: absolute;
+        cursor: pointer;
+        font-weight: 700;
+        font-size: 1.9rem;
+    }
+    #minus {
+        top: 0;
+        left: -2rem;
+        bottom: 0;
+        width: 2rem;
+        border-top-left-radius: .5rem;
+        border-bottom-left-radius: .5rem;
+    }
+    #plus {
+        top: 0;
+        bottom: 0;
+        right: -2rem;
+        width: 2rem;
+        border-top-right-radius: .5rem;
+        border-bottom-right-radius: .5rem;
+    }
+    .input--quantity {
+        transition: .4s;
+        border: 1px solid #ccc;
+        justify-content: stretch;
+        padding: 0;
+        height: 3.5rem;
+        font-size: 1.8rem;
+        text-align: center;
+        position: relative;
+        -webkit-appearance: textfield;
+        -moz-appearance: textfield;
+        appearance: textfield;
+
+        &::-webkit-inner-spin-button,
+        &::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+        }
+
+        &:in-range {
+            background: lightgreen;
+        }
+    }
+}
+
+.generate-button {
+    height: 3.5rem;
+    border-radius: .5rem;
+    padding: .5rem;
+    cursor: pointer;
+    font-weight: bold;
+    background: #12CBC4;
+    position: relative;
+    float: right;
+    border: none;
+    transition: all .2s;
+
+    &:hover {
+        transform: scale(1.03) translateY(-3px);
+    }
+
+    &:active {
+        transform: translateY(0px);
+    }
+}
+
+.quote {
+    padding: 1rem;
+    background: lighten(#FDA7DF, 15%);
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+}
