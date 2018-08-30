@@ -66,11 +66,11 @@ function getQuotes(topic, quantity) {
     quotesArr = [];
 
     while (quotesArr.length != quantity) {
-        
+
         // The loop will continue until we have enough quotesArr generated.
 
         let tempQuote = makeQuote(topic); // 1 quote per Call
-        
+
         if (quotesArr.indexOf(tempQuote) == -1) {
             quotesArr.push(tempQuote);
         } else {
@@ -97,8 +97,8 @@ $(function() {
     /*
         switch topic
     */
-    $(".switch").on("mouseup", function(e) {
-        topic == "animals" ? topic = "human" : topic = "animals";
+    $(".switch-button").on("click", function(e) {        
+        e.target.checked ? topic = "animals" : topic = "human";
     });
 })
 

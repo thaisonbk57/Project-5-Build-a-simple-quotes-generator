@@ -1,12 +1,12 @@
-$optionBackground: #ff6f69;
-$displayBackground: #FFC312;
+$optionBackground: #0097e6;
+$displayBackground: #00a8ff;
 
 $color-primary: #F79F1F;
 $color-secondary: #FFC312;
 $color-tertiary: #EE5A24;
 
 $color-dark: #333;
-$color-white: #fff;
+$color-white: #f5f6fa;
 
 
 
@@ -22,7 +22,7 @@ $color-white: #fff;
 
 html,
 body {
-    background: lightblue;
+    background: $color-white;
     box-sizing: border-box;
     font-size: 62.5%;
 }
@@ -58,8 +58,7 @@ header {
     &__display {
         min-height: 35rem;
         background: $displayBackground;
-        padding-top: 3rem;
-        padding-bottom: 1rem;
+        padding: 3rem 2rem 1rem;
         border-bottom-left-radius: .8rem;
         border-bottom-right-radius: .8rem;
         position: relative;
@@ -67,7 +66,7 @@ header {
             content: "by Thaison";
             display: block;
             position: absolute;
-            bottom: -2rem;
+            bottom: -4rem;
             text-align: center;
             left: 0;
             right: 0;
@@ -100,7 +99,7 @@ header {
         font-size: 1.5rem;
         line-height: 3.5rem;
         font-weight: 200;
-        color: $color-dark;
+        color: $color-white;
     }
 
     &::before {
@@ -128,7 +127,7 @@ header {
         width: 2.7rem;
         height: 2.7rem;
         border-radius: 50%;
-        background: #12CBC4;
+        background: $optionBackground;
         transition: all .4s;
     }
 
@@ -149,18 +148,19 @@ header {
         cursor: pointer;
         font-weight: 700;
         font-size: 1.9rem;
+        background-color: $displayBackground;
+        color: $color-white;
+        top: 0;
+        bottom: 0;
+        left: -2rem;
     }
     #minus {
-        top: 0;
-        left: -2rem;
-        bottom: 0;
         width: 2rem;
         border-top-left-radius: .5rem;
         border-bottom-left-radius: .5rem;
     }
     #plus {
-        top: 0;
-        bottom: 0;
+        left: unset;
         right: -2rem;
         width: 2rem;
         border-top-right-radius: .5rem;
@@ -168,7 +168,7 @@ header {
     }
     .input--quantity {
         transition: .4s;
-        border: 1px solid #ccc;
+        border: 1px solid $displayBackground;
         justify-content: stretch;
         padding: 0;
         height: 3.5rem;
@@ -178,6 +178,7 @@ header {
         -webkit-appearance: textfield;
         -moz-appearance: textfield;
         appearance: textfield;
+        color: $color-white;
 
         &::-webkit-inner-spin-button,
         &::-webkit-outer-spin-button {
@@ -185,7 +186,7 @@ header {
         }
 
         &:in-range {
-            background: lightgreen;
+            background: $optionBackground;
         }
     }
 }
@@ -193,10 +194,11 @@ header {
 .generate-button {
     height: 3.5rem;
     border-radius: .5rem;
-    padding: .5rem;
+    padding: .5rem 1rem;
     cursor: pointer;
     font-weight: bold;
-    background: #12CBC4;
+    background: $color-white;
+    color: $optionBackground;
     position: relative;
     float: right;
     border: none;
@@ -213,7 +215,7 @@ header {
 
 .quote {
     padding: 1rem;
-    background: lighten(#FDA7DF, 15%);
+    background: $color-white;
     margin-bottom: 2rem;
     font-size: 1.8rem;
 }
