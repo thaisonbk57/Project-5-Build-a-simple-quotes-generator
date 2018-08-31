@@ -84,7 +84,7 @@ function getQuotes(topic, quantity) {
 
     //loop through the array quotesArr.
     quotesArr.forEach((curr, index) => {
-        output += "<pre class='quote'>" + "<b>Quote #" + (index + 1) + ":</b>     " + curr + "</pre>";
+        output += "<p class='quote'>" + "<b>Quote #" + (index + 1) + ":</b> &nbsp;&nbsp;" + curr + "</p>";
     });
 
     $(".board__display").html(output);
@@ -97,7 +97,7 @@ $(function() {
     /*
         switch topic
     */
-    $(".switch-button").on("click", function(e) {        
+    $(".switch-button").on("click", function(e) {
         e.target.checked ? topic = "animals" : topic = "human";
     });
 })
