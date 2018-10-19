@@ -84,10 +84,11 @@ function getQuotes(topic, quantity) {
 
     //loop through the array quotesArr.
     quotesArr.forEach((curr, index) => {
-        output += "<p class='quote'>" + "<b>Quote #" + (index + 1) + ":</b> &nbsp;&nbsp;" + curr + "</p>";
+        output += "<p class='quote'>" + "<b>Quote #" + (index + 1) + ":</b> &nbsp;&nbsp;" + curr + "</p>" + "\n";
     });
 
     $(".board__display").html(output);
+    // console.log(output);
 
 }
 
