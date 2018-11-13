@@ -1,4 +1,5 @@
 # A Simple Quote Generator
+#### The 5th project at [OpenClassroom](https://openclassrooms.com)
 `html` `css (scss)`  `js (jquery)` `gulp`
 
 By [Thaison Dang](https://github.com/thaisonbk57/)
