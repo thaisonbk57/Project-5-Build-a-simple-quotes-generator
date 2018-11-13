@@ -5,6 +5,8 @@ By [Thaison Dang](https://github.com/thaisonbk57/)
 
 ![scs](./screenshoot.png)
 
+Try the [DEMO](https://simple-quote-generator.firebaseapp.com/)
+
 # Description
 
 This **quote generator** has 2 pre-defined topics for users to choose from. Once users have choosen the topic and the number of quotes to generate, press **GERNERATE** button to start the machine.
